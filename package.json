@@ -1,0 +1,40 @@
+{
+  "name": "reaclaim-components-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rollup -c rollup-dev.config.mjs -w --bundleConfigAsCjs",
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.2",
+    "@rollup/plugin-replace": "^5.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^2.0.2",
+    "serve": "^14.2.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
