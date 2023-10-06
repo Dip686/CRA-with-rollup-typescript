@@ -8,7 +8,7 @@ import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import image from '@rollup/plugin-image';
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
 
 const packageJson = require('./package.json');
 
@@ -34,7 +34,6 @@ export default [
       }
     ],
     plugins: [
-      external(),
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         browser: true, // To resolve browser-specific imports

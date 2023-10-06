@@ -1,5 +1,3 @@
-import serve from "rollup-plugin-serve";
-import livereload from "rollup-plugin-livereload";
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -9,6 +7,7 @@ import terser from '@rollup/plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import image from '@rollup/plugin-image';
 import postcss from 'rollup-plugin-postcss'
+import autoExternal from 'rollup-plugin-auto-external';
 
 const packageJson = require('./package.json');
 
@@ -34,7 +33,7 @@ export default [
       }
     ],
     plugins: [
-      external(['react', 'react-dom']), // Specify React and React DOM as external dependencies
+      autoExternal(),
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         browser: true, // To resolve browser-specific imports
