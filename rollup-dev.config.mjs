@@ -34,7 +34,7 @@ export default [
       }
     ],
     plugins: [
-      external(['react', 'react-dom']), // Specify React and React DOM as external dependencies
+      external(),
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         browser: true, // To resolve browser-specific imports
@@ -55,7 +55,7 @@ export default [
       serve({
         open: true,
         verbose: true,
-        contentBase: ["", "public"],
+        contentBase: [""],
         host: "localhost",
         port: 3000,
       }),
